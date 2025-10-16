@@ -102,7 +102,7 @@ Fully responsive UI for desktop, tablet, and mobile devices.
 ```
 ## Screenshots
 ### Home Page
-![Home Page](screenshots/Home (1).png)
+![Home Page](screenshots/Home(1).png)
 
 ### Login Page
 ![Login Page](screenshots/Login(2).png)
