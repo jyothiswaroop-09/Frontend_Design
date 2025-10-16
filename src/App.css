@@ -1,38 +1,275 @@
-.App {
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  background: #f4f4f9;
+  color: #333;
+}
+
+.navbar {
+  background: #4a90e2;
+  color: #fff;
+  padding: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar li {
+  margin: 0.5rem 1rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
+.section {
+  padding: 2rem;
+  text-align: center;
+}
+
+.responsive-img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+}
+
+.form,
+.todo-box {
+  background: #fff;
+  max-width: 400px;
+  margin: auto;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+input {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.6rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+button {
+  background: #4a90e2;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #357ac9;
+}
+
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.todo-container {
+  text-align: center;
+  padding: 2rem;
+}
+
+.todo-input {
+  width: 200px;
+  padding: 0.4rem;
+  font-size: 0.95rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.todo-button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.todo-button:hover {
+  background-color: #0056b3;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 1rem;
+}
+
+.todo-list li {
+  margin-bottom: 0.5rem;
+}
+
+footer {
+  background: #4a90e2;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.home-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #f5f7fa;
+  min-height: 80vh;
 }
 
-.App-link {
-  color: #61dafb;
+.home-title {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.home-description {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.home-features {
+  list-style: disc;
+  text-align: left;
+  max-width: 500px;
+  margin-bottom: 2rem;
+  color: #555;
+  padding-left: 1rem;
+}
+
+.home-features li {
+  margin-bottom: 0.7rem;
+}
+
+.home-login-btn {
+  padding: 0.7rem 1.5rem;
+  font-size: 1.1rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.home-login-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Tablet styles */
+@media (max-width: 900px) {
+  .home-title {
+    font-size: 2.2rem;
   }
-  to {
-    transform: rotate(360deg);
+  .home-description {
+    font-size: 1rem;
+    max-width: 600px;
+  }
+  .home-features {
+    max-width: 400px;
+  }
+  .home-login-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.2rem;
+  }
+  .todo-input {
+    width: 180px;
+  }
+  .todo-button {
+    padding: 0.45rem 0.9rem;
+    font-size: 0.9rem;
+  }
+  .todo-list li {
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 600px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+  .home-description {
+    font-size: 0.95rem;
+    max-width: 90%;
+  }
+  .home-features {
+    max-width: 90%;
+    padding-left: 0.8rem;
+  }
+  .home-login-btn {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+  }
+  .todo-input {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+  .todo-button {
+    width: 90%;
+    padding: 0.5rem 0;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  .todo-list li {
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .todo-list li button {
+    margin-top: 0.3rem;
+    margin-left: 0;
+  }
+}
+
+/* Navbar responsiveness */
+@media (max-width: 768px) {
+  .navbar h1 { font-size: 1.4rem; }
+  .section { padding: 1rem; }
+  .navbar ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .navbar li {
+    margin: 0.3rem 0;
+  }
+}
+
+/* Optional: small tweaks for inputs and buttons in forms on mobile */
+@media (max-width: 600px) {
+  .form input,
+  .form button,
+  .todo-box input,
+  .todo-box button {
+    width: 90%;
   }
 }
