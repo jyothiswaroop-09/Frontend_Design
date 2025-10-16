@@ -1,70 +1,103 @@
-# Getting Started with Create React App
+# Frontend Dashboard Project
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A **responsive React dashboard application** featuring **Home, Login, and Todo pages**. Each user can log in with a unique email and manage their own Todo list. The project is **mobile and tablet friendly** and hosted as a web app.
 
-## Available Scripts
+---
 
-In the project directory, you can run:
+## **Features**
 
-### `npm start`
+### Home Page
+- Displays a welcoming message and project description.
+- Highlights the Todo application functionality.
+- Provides a **Login button** for users to access their account.
+- Fully responsive for desktop, tablet, and mobile devices.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Login Page
+- Users can log in with **email and password**.
+- Validates email format and password length.
+- Passwords are stored locally per email.
+- Supports **multiple users**, each with their own Todo list.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Todo Page
+- Personalized Todo list for each user.
+- Add, delete, and manage tasks efficiently.
+- Todo input and buttons are mobile/tablet friendly.
+- Logout button available after login.
+- Data is saved in **localStorage**, persistent across sessions.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## **Technologies Used**
+- **React.js** for building the SPA.
+- **React Router** for page navigation.
+- **LocalStorage** for storing user data and Todos.
+- **HTML5, CSS3, JavaScript** for UI and styling.
+- Fully responsive design with media queries.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## **Project Structure**
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```frontend-dashboard/
+├── public/
+│ └── index.html
+├── src/
+│ ├── components/
+│ │ ├── Dashboard.jsx
+│ │ ├── Home.jsx
+│ │ ├── Login.jsx
+│ │ └── Todo.jsx
+│ ├── App.jsx
+│ ├── index.js
+│ └── index.css
+├── package.json
+└── README.md
+```
+## **Installation**
+```
+1. Clone the repository:
+git clone https://github.com/YOUR_USERNAME/frontend-dashboard.git
+cd frontend-dashboard
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies:
+npm install
 
-### `npm run eject`
+3.Run locally:
+npm start
+Opens the app at http://localhost:3000.
+```
+## Deployment on GitHub Pages
+```
+1.Install gh-pages:
+npm install --save gh-pages
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2.Update package.json:
+"homepage": "https://YOUR_USERNAME.github.io/frontend-dashboard",
+"scripts": {
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d build"
+}
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+3.Deploy:
+npm run deploy
+Your app will be live at:
+https://YOUR_USERNAME.github.io/frontend-dashboard
+```
+## Usage
+```
+Open Home page and click Login.
+Enter email and password.
+New email → generates new Todo list.
+Existing email → password must match to access Todos.
+After login, you are redirected to Todo page.
+Add or delete tasks.
+Click Logout to end the session.
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Notes
+```
+Passwords and Todos are stored in localStorage → persistent but accessible only in the same browser.
+Each user has a separate Todo list.
+Fully responsive UI for desktop, tablet, and mobile devices.
+```
+## Screenshots
